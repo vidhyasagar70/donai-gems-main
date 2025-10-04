@@ -7,7 +7,7 @@ export default function DonaiDifference() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="font-openSans text-white text-sm md:text-base tracking-[0.2em] uppercase mb-4 font-medium">
-            WHY CHOOSE US
+           Why Choose Donai Gems for Your Gemstone Collection
           </p>
           <h2 className="font-playfair text-white text-4xl md:text-5xl lg:text-6xl font-normal leading-tight">
             Experience the Donai Difference

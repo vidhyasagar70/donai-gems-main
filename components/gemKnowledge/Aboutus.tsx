@@ -92,23 +92,17 @@ const AboutUsSection = () => {
               
               <div className="font-openSans space-y-5 text-[#606060] leading-relaxed font-light">
                 <p className="text-sm lg:text-base">
-                  At Donai Gems, we are more than a jewelry house — we are artisans of beauty, 
-                  passion, and timeless craftsmanship. Located in the historic heart of Antwerp, 
-                  Belgium, the world's gemstone capital, we dedicate ourselves to sourcing the 
-                  rarest and most brilliant gemstones. Each stone is carefully selected for its quality, 
-                  integrity, and uniqueness, ensuring our clients receive nothing but exceptional 
-                  creations. With every gemstone, our master jewelers blend traditional European 
-                  craftsmanship with modern sophistication, transforming nature's treasures into 
-                  extraordinary works of art.
+                  At Donai Gems, we are more than a jewellery house — we are artisans of beauty, passion, and timeless craftsmanship. Nestled in the historic heart of Belgium, the world’s gemstone capital, we dedicate ourselves to sourcing the rarest and most brilliant treasures, offering clients access to Premium Gems in Belgium that embody elegance and distinction.
                 </p>
                 
                 <p className="text-sm lg:text-base">
-                  Our philosophy is rooted in creating jewelry that transcends trends, celebrating 
-                  individuality, love, and legacy. Every piece, from radiant necklaces to bespoke 
-                  rings, is designed to be more than adornment — it is destined to become a 
-                  cherished heirloom, carrying stories that last generations. At Donai Gems, 
-                  elegance, artistry, and authenticity come together to deliver jewelry that truly 
-                  captivates and inspires.
+                  Each gemstone — from radiant rubies and sapphires to exquisite emeralds and timeless diamonds — is carefully chosen for its integrity, rarity, and brilliance. Our commitment ensures that every client receives creations of unmatched quality and authenticity. With every piece, our master jewellers unite European craftsmanship with modern sophistication, transforming nature’s wonders into extraordinary works of art.
+                </p>
+                <p>
+                  Our philosophy is rooted in crafting jewellery that transcends fleeting trends, celebrating individuality, love, and legacy. Every creation, whether a bespoke ring or a statement necklace, is designed to be more than adornment — it is destined to become a cherished heirloom, carrying stories across generations.
+                </p>
+                <p>
+                  At Donai Gems, artistry, authenticity, and heritage converge to deliver luxury gemstones in Belgium that inspire, captivate, and endure
                 </p>
               </div>
             </div>

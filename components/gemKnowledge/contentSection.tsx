@@ -42,30 +42,30 @@ const GemstoneShowcase = () => {
 
   const sections: Section[] = [
     {
-      title: 'Introduction to Emeralds',
+      title: 'Emeralds in Belgium: Timeless Green Treasures',
       content:
-        'Emeralds, with their captivating green hue, have been cherished since ancient times for their beauty and rarity. Revered as one of the "Big Four" gemstones alongside diamond, ruby, and sapphire, their rich color and lustrous allure make them a favorite for fine jewelry. Explore the beauty and heritage of emeralds, offering only the finest stones for your collection.',
+        'Emeralds, celebrated for their rich green hues, have been treasured since ancient times as symbols of harmony, renewal, and prosperity. As members of the beryl family, emeralds rank among the world’s most iconic gemstones. At Donai Gems, we offer finely sourced emeralds in Belgium, handpicked for their brilliance, clarity, and rarity. These collectible green gemstones are perfect for bespoke jewellery, heirloom pieces, or sophisticated collector displays',
       image: '/images/emerald.jpg',
       align: 'right'
     },
     {
-      title: 'Introduction to Rubies',
+      title: 'Rubies in Belgium: The King of Gems',
       content:
-        'Rubies, the vibrant red gemstones of the corundum family, are celebrated for their brilliance and regal allure. Known for their durability and vivid hues, rubies have symbolized wealth, power, and passion for centuries. Our collection showcases their fiery brilliance and rich history for jewelry enthusiasts and collectors.',
+        'Rubies, with their fiery red tones, are prized as symbols of passion, protection, and vitality. Belonging to the corundum family, rubies are admired worldwide for their hardness, vivid color, and historical significance. At Donai Gems, we present a curated selection of premium rubies in Belgium, showcasing authentic red gemstones ideal for fine jewellery, heirloom-quality rings, and investment collections.',
       image: '/images/ruby.jpg',
       align: 'left'
     },
     {
-      title: 'Introduction to Sapphires',
+      title: 'Sapphires in Belgium: Elegance in Every Hue',
       content:
-        'Sapphires, renowned for their stunning colors and exceptional durability, are among the most cherished gemstones. A prized variety of corundum, sapphires are second only to diamonds in hardness. While blue sapphires are iconic, they come in nearly every color of the rainbow. Explore our curated collection that celebrates their versatility and elegance.',
+        'Sapphires, famous for their exceptional durability and stunning spectrum of colors, are among the most sought-after premium gemstones in Belgium. Beyond the classic deep blue, sapphires appear in pink, yellow, and even rare green varieties. These artisan-crafted gemstones blend timeless elegance with European craftsmanship, making them a favourite for bespoke necklaces, rings, and collectible jewellery.',
       image: '/images/sapphire.jpg',
       align: 'right'
     },
     {
-      title: 'Introduction to Semi-Precious Gems',
+      title: 'Semi-Precious Gems in Belgium: Diversity and Beauty',
       content:
-        'Our semi-precious gem collection offers affordable yet stunning alternatives to traditional precious stones. From blue zircon to citrine and amethyst, these gems bring color and character to unique jewelry. At Divine Gems, we celebrate the diversity and beauty of semi-precious gems with high-quality specimens that inspire creativity.',
+        'Semi-precious gemstones provide endless variety and creativity for collectors and jewellery enthusiasts. While traditionally more abundant than the “Big Four,” stones like amethyst, citrine, garnet, and topaz rival precious gems in beauty and character. At Donai Gems, we source high-quality semi-precious stones in Belgium, celebrating their color, patterns, and durability. Each piece in our rare semi-precious collection is perfect for custom jewellery or unique heirloom-quality creations.',
       image: '/images/semi-precious.jpg',
       align: 'left'
     }
