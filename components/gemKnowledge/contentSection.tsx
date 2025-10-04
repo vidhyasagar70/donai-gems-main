@@ -13,14 +13,14 @@ const GemstoneShowcase = () => {
       title: 'Emeralds in Belgium: Timeless Green Treasures',
       content:
         'Emeralds, celebrated for their rich green hues, have been treasured since ancient times as symbols of harmony, renewal, and prosperity. As members of the beryl family, emeralds rank among the worlds most iconic gemstones. At Donai Gems, we offer finely sourced emeralds in Belgium, handpicked for their brilliance, clarity, and rarity. These collectible green gemstones are perfect for bespoke jewellery, heirloom pieces, or sophisticated collector displays',
-      image: '/images/emerald.jpg',
+      image: '/images/Emerald.jpg',
       align: 'right'
     },
     {
       title: 'Rubies in Belgium: The King of Gems',
       content:
         'Rubies, with their fiery red tones, are prized as symbols of passion, protection, and vitality. Belonging to the corundum family, rubies are admired worldwide for their hardness, vivid color, and historical significance. At Donai Gems, we present a curated selection of premium rubies in Belgium, showcasing authentic red gemstones ideal for fine jewellery, heirloom-quality rings, and investment collections.',
-      image: '/images/ruby.jpg',
+      image: '/images/Ruby.jpg',
       align: 'left'
     },
     {
