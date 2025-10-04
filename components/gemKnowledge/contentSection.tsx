@@ -1,7 +1,5 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-
 interface Section {
   title: string;
   content: string;
@@ -10,41 +8,11 @@ interface Section {
 }
 
 const GemstoneShowcase = () => {
-  const [visibleSections, setVisibleSections] = useState<number[]>([]);
-  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const observers = sectionRefs.current.map((ref, index) => {
-      if (!ref) return null;
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setVisibleSections((prev) => {
-                if (prev.includes(index)) return prev;
-                return [...prev, index];
-              });
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
-
-      observer.observe(ref);
-      return observer;
-    });
-
-    return () => {
-      observers.forEach((observer) => observer?.disconnect());
-    };
-  }, []);
-
   const sections: Section[] = [
     {
       title: 'Emeralds in Belgium: Timeless Green Treasures',
       content:
-        'Emeralds, celebrated for their rich green hues, have been treasured since ancient times as symbols of harmony, renewal, and prosperity. As members of the beryl family, emeralds rank among the world’s most iconic gemstones. At Donai Gems, we offer finely sourced emeralds in Belgium, handpicked for their brilliance, clarity, and rarity. These collectible green gemstones are perfect for bespoke jewellery, heirloom pieces, or sophisticated collector displays',
+        'Emeralds, celebrated for their rich green hues, have been treasured since ancient times as symbols of harmony, renewal, and prosperity. As members of the beryl family, emeralds rank among the worlds most iconic gemstones. At Donai Gems, we offer finely sourced emeralds in Belgium, handpicked for their brilliance, clarity, and rarity. These collectible green gemstones are perfect for bespoke jewellery, heirloom pieces, or sophisticated collector displays',
       image: '/images/emerald.jpg',
       align: 'right'
     },
@@ -65,7 +33,7 @@ const GemstoneShowcase = () => {
     {
       title: 'Semi-Precious Gems in Belgium: Diversity and Beauty',
       content:
-        'Semi-precious gemstones provide endless variety and creativity for collectors and jewellery enthusiasts. While traditionally more abundant than the “Big Four,” stones like amethyst, citrine, garnet, and topaz rival precious gems in beauty and character. At Donai Gems, we source high-quality semi-precious stones in Belgium, celebrating their color, patterns, and durability. Each piece in our rare semi-precious collection is perfect for custom jewellery or unique heirloom-quality creations.',
+        'Semi-precious gemstones provide endless variety and creativity for collectors and jewellery enthusiasts. While traditionally more abundant than the "Big Four," stones like amethyst, citrine, garnet, and topaz rival precious gems in beauty and character. At Donai Gems, we source high-quality semi-precious stones in Belgium, celebrating their color, patterns, and durability. Each piece in our rare semi-precious collection is perfect for custom jewellery or unique heirloom-quality creations.',
       image: '/images/semi-precious.jpg',
       align: 'left'
     }
@@ -76,42 +44,26 @@ const GemstoneShowcase = () => {
       {sections.map((section, index) => (
         <div
           key={index}
-          ref={(el) => {
-            sectionRefs.current[index] = el;
-          }}
-          className="h-[85vh] flex items-center transition-all duration-1000"
-          style={{
-            background: 'linear-gradient(to right, #fff5ec 0%, #f3f3f5 100%)'
-          }}
+          className="min-h-screen flex items-center bg-gradient-to-r from-orange-50 to-gray-100"
         >
-          <div className="w-full h-full flex">
+          <div className="w-full">
             <div
-              className={`w-full h-full flex ${
-                section.align === 'left' ? 'flex-row-reverse' : 'flex-row'
-              } items-center`}
+              className={`flex flex-col ${
+                section.align === 'left' ? 'lg:flex-row-reverse' : 'lg:flex-row'
+              } items-stretch lg:items-center min-h-screen`}
             >
               {/* Content Side */}
-              <div
-                className={`w-1/2 h-full flex items-center px-12 lg:px-16 xl:px-24 transition-all duration-1000 ${
-                  visibleSections.includes(index)
-                    ? 'opacity-100 translate-x-0'
-                    : section.align === 'left'
-                    ? 'opacity-0 -translate-x-20'
-                    : 'opacity-0 translate-x-20'
-                }`}
-              >
-                <div className="max-w-xl">
-                  <h2 className="font-playfair text-3xl lg:text-4xl xl:text-5xl font-normal leading-tight mb-6 text-gray-800">
+              <div className="w-full lg:w-1/2 flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 lg:py-16">
+                <div className="max-w-xl w-full">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-normal leading-tight mb-4 sm:mb-5 md:mb-6 text-gray-800">
                     {section.title}
                   </h2>
-                  <p className="font-openSans text-base lg:text-lg leading-relaxed mb-8 text-[#606060] font-light">
+                  <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-7 md:mb-8 text-gray-600 font-light">
                     {section.content}
                   </p>
-                  <button
-                    className="font-openSans text-white px-8 py-3 rounded-none transition-all duration-300 font-medium uppercase text-sm hover:opacity-90 hover:shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
-                    style={{
-                      background: '#aa8765'
-                    }}
+                  <button 
+                    className="text-white px-6 sm:px-8 py-2.5 sm:py-3 transition-all duration-300 font-medium uppercase text-xs sm:text-sm hover:opacity-90 hover:shadow-2xl w-full sm:w-auto"
+                    style={{ background: '#aa8765' }}
                   >
                     View Details
                   </button>
@@ -119,15 +71,7 @@ const GemstoneShowcase = () => {
               </div>
 
               {/* Image Side */}
-              <div
-                className={`w-1/2 h-full transition-all duration-1000 ${
-                  visibleSections.includes(index)
-                    ? 'opacity-100 translate-x-0'
-                    : section.align === 'left'
-                    ? 'opacity-0 translate-x-20'
-                    : 'opacity-0 -translate-x-20'
-                }`}
-              >
+              <div className="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-screen">
                 <div className="relative w-full h-full">
                   <img
                     src={section.image}

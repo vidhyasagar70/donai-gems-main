@@ -14,7 +14,6 @@ export default function DonaiDifference() {
           </h2>
         </div>
 
-        {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 lg:gap-y-16">
           {/* Exceptional Quality */}
           <div>
@@ -56,7 +55,7 @@ export default function DonaiDifference() {
             </p>
           </div>
 
-          {/* Heritage & Legacy */}
+          
           <div>
             <h3 className="font-playfair text-white text-xl md:text-2xl font-normal mb-4">
               Heritage & Legacy
@@ -66,7 +65,7 @@ export default function DonaiDifference() {
             </p>
           </div>
 
-          {/* Passion & Integrity */}
+          
           <div>
             <h3 className="font-playfair text-white text-xl md:text-2xl font-normal mb-4">
               Passion & Integrity
