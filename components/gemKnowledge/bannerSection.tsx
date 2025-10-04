@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image';
 
 export default function BannerSection() {
@@ -14,13 +13,11 @@ export default function BannerSection() {
         sizes="100vw"
         className="object-cover object-center"
       />
-
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40 z-10"></div>
-
       {/* Centered Text */}
       <div className="relative z-20 flex items-center justify-center h-full">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-4">
+        <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-4">
           Gems Knowledge
         </h1>
       </div>

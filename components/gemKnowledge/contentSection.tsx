@@ -73,18 +73,6 @@ const GemstoneShowcase = () => {
 
   return (
     <div className="min-h-screen">
-      <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap');
-        
-        .title-font {
-          font-family: 'Playfair Display', serif;
-        }
-        
-        .body-font {
-          font-family: 'Jost', sans-serif;
-        }
-      `}</style>
-      
       {sections.map((section, index) => (
         <div
           key={index}
@@ -113,14 +101,14 @@ const GemstoneShowcase = () => {
                 }`}
               >
                 <div className="max-w-xl">
-                  <h2 className="title-font text-3xl lg:text-4xl xl:text-5xl font-normal leading-tight mb-6 text-gray-800">
+                  <h2 className="font-playfair text-3xl lg:text-4xl xl:text-5xl font-normal leading-tight mb-6 text-gray-800">
                     {section.title}
                   </h2>
-                  <p className="body-font text-base lg:text-lg leading-relaxed mb-8 text-[#606060]" style={{ fontWeight: 300 }}>
+                  <p className="font-openSans text-base lg:text-lg leading-relaxed mb-8 text-[#606060] font-light">
                     {section.content}
                   </p>
                   <button
-                    className="body-font text-white px-8 py-3 rounded-none transition-all duration-300 font-medium uppercase text-sm hover:opacity-90 hover:shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
+                    className="font-openSans text-white px-8 py-3 rounded-none transition-all duration-300 font-medium uppercase text-sm hover:opacity-90 hover:shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
                     style={{
                       background: '#aa8765'
                     }}

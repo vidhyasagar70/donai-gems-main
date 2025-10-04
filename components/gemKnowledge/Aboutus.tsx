@@ -32,21 +32,8 @@ const AboutUsSection = () => {
   return (
     <div 
       ref={sectionRef}
-      className="min-h-screen py-16 px-8 lg:px-16"
-      style={{ background: 'linear-gradient(to right, #fff5ec 0%, #fff5ec 100%)' }}
+      className="min-h-screen py-16 px-8 lg:px-16 bg-gradient-to-r from-[#fff5ec] to-[#fff5ec]"
     >
-      <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap');
-        
-        .title-font {
-          font-family: 'Playfair Display', serif;
-        }
-        
-        .body-font {
-          font-family: 'Jost', sans-serif;
-        }
-      `}</style>
-
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
           {/* Left Side - Images */}
@@ -95,15 +82,15 @@ const AboutUsSection = () => {
             }`}
           >
             <div className="space-y-6">
-              <p className="body-font text-sm font-semibold tracking-[0.2em] text-gray-600 uppercase">
+              <p className="font-openSans text-sm font-semibold tracking-[0.2em] text-gray-600 uppercase">
                 About Us
               </p>
               
-              <h2 className="title-font text-3xl lg:text-4xl xl:text-5xl font-normal leading-tight text-gray-900">
+              <h2 className="font-playfair text-3xl lg:text-4xl xl:text-5xl font-normal leading-tight text-gray-900">
                 Crafting Timeless Elegance With Passion
               </h2>
               
-              <div className="body-font space-y-5 text-[#606060] leading-relaxed" style={{ fontWeight: 300 }}>
+              <div className="font-openSans space-y-5 text-[#606060] leading-relaxed font-light">
                 <p className="text-sm lg:text-base">
                   At Donai Gems, we are more than a jewelry house — we are artisans of beauty, 
                   passion, and timeless craftsmanship. Located in the historic heart of Antwerp, 
