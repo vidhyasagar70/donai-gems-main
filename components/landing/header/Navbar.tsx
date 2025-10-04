@@ -75,7 +75,7 @@ const Navbar = () => {
         { name: "ABOUT US", path: "/About" },
         { name: "GEMSTONE", path: "/gemstones" },
         { name: "FINE JEWELRY", path: "/jewelery" },
-        { name: "GEM KNOWLEDGE", path: "/gem-knowledge" },
+        { name: "GEM KNOWLEDGE", path: "/gemknowledge" },
         { name: "CONTACT US", path: "/Contact" },
     ];
 
