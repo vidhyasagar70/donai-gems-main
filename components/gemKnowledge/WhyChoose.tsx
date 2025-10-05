@@ -1,10 +1,12 @@
 'use client';
-import { Playfair_Display} from "next/font/google";
+import { Playfair_Display } from "next/font/google";
+import { motion } from "framer-motion";
 
 const playFair = Playfair_Display({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700"],
 });
+
 export default function DonaiDifference() {
   return (
     <section className="bg-[#A68A6A] px-6 py-16 md:py-24">
@@ -18,67 +20,91 @@ export default function DonaiDifference() {
             Experience the Donai Difference
           </h2>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 lg:gap-y-16">
           {/* Exceptional Quality */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <h3 className={`text-white text-xl md:text-2xl font-normal mb-4 ${playFair.className}`}>
               Exceptional Quality
             </h3>
             <p className="font-openSans text-white/90 text-sm md:text-base leading-relaxed font-light">
               Every gemstone is handpicked for brilliance, rarity, and integrity, ensuring that our clients receive nothing but the highest quality creations.
             </p>
-          </div>
-
+          </motion.div>
           {/* Master Craftsmanship */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <h3 className={`text-white text-xl md:text-2xl font-normal mb-4 ${playFair.className}`}>
               Master Craftsmanship
             </h3>
             <p className="font-openSans text-white/90 text-sm md:text-base leading-relaxed font-light">
               Our skilled artisans combine traditional techniques with modern design to create jewelry that reflects artistry and authenticity.
             </p>
-          </div>
-
+          </motion.div>
           {/* Timeless Design */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <h3 className={`text-white text-xl md:text-2xl font-normal mb-4 ${playFair.className}`}>
               Timeless Design
             </h3>
             <p className="font-openSans text-white/90 text-sm md:text-base leading-relaxed font-light">
               We craft pieces that transcend trends, blending elegance with sophistication to be cherished across generations.
             </p>
-          </div>
-
+          </motion.div>
           {/* Personalized Creations */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <h3 className={`text-white text-xl md:text-2xl font-normal mb-4 ${playFair.className}`}>
               Personalized Creations
             </h3>
             <p className="font-openSans text-white/90 text-sm md:text-base leading-relaxed font-light">
               From bespoke jewels to unique statement pieces, we design jewelry tailored to your individual taste and story.
             </p>
-          </div>
-
+          </motion.div>
           
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <h3 className={`text-white text-xl md:text-2xl font-normal mb-4 ${playFair.className}`}>
               Heritage & Legacy
             </h3>
             <p className="font-openSans text-white/90 text-sm md:text-base leading-relaxed font-light">
               Rooted in Antwerp's rich history of fine jewelry, our pieces carry the legacy of European craftsmanship to you.
             </p>
-          </div>
-
+          </motion.div>
           
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <h3 className={`text-white text-xl md:text-2xl font-normal mb-4 ${playFair.className}`}>
               Passion & Integrity
             </h3>
             <p className="font-openSans text-white/90 text-sm md:text-base leading-relaxed font-light">
               We operate with a deep respect for nature's treasures, ensuring ethical sourcing and genuine care in every creation.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

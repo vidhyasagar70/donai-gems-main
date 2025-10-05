@@ -1,7 +1,7 @@
 'use client';
 
 import { Playfair_Display, Jost } from "next/font/google";
-import { SlideAnimation } from '../ui/SlideAnimation'; 
+import { motion } from "framer-motion";
 
 const playFair = Playfair_Display({
     subsets: ["latin"],
@@ -66,8 +66,11 @@ const GemstoneShowcase = () => {
               } items-stretch lg:items-center min-h-screen`}
             >
               
-              <SlideAnimation 
-                direction={section.align === 'left' ? 'right' : 'left'}
+              <motion.div
+                initial={{ opacity: 0, x: section.align === 'left' ? 100 : -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true, amount: 0.3 }}
                 className="w-full lg:w-1/2 flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 lg:py-16"
               >
                 <div className="max-w-xl w-full">
@@ -84,11 +87,14 @@ const GemstoneShowcase = () => {
                     View Details
                   </button>
                 </div>
-              </SlideAnimation>
+              </motion.div>
 
               
-              <SlideAnimation 
-                direction={section.align === 'left' ? 'left' : 'right'}
+              <motion.div
+                initial={{ opacity: 0, x: section.align === 'left' ? -100 : 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true, amount: 0.3 }}
                 className="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-screen"
               >
                 <div className="relative w-full h-full">
@@ -98,7 +104,7 @@ const GemstoneShowcase = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-              </SlideAnimation>
+              </motion.div>
             </div>
           </div>
         </div>
