@@ -1,11 +1,13 @@
 'use client';
 import Image from 'next/image';
-import { Playfair_Display} from "next/font/google";
+import { Playfair_Display } from "next/font/google";
+import { FadeUpAnimation } from '../ui/FadeUpAnimation'; 
 
 const playFair = Playfair_Display({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700"],
 });
+
 export default function BannerSection() {
   return (
     <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden">
@@ -18,13 +20,14 @@ export default function BannerSection() {
         sizes="100vw"
         className="object-cover object-center"
       />
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40 z-10"></div>
-      {/* Centered Text */}
+      {/* Centered Text with Animation */}
       <div className="relative z-20 flex items-center justify-center h-full">
-        <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-4 ${playFair.className}`}>
-          Gems Knowledge
-        </h1>
+        <FadeUpAnimation delay={0.1}>
+          <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-4 ${playFair.className}`}>
+            Gems Knowledge
+          </h1>
+        </FadeUpAnimation>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { Playfair_Display, Jost } from "next/font/google";
+import { SlideAnimation } from '../ui/SlideAnimation'; 
 
 const playFair = Playfair_Display({
     subsets: ["latin"],
@@ -64,8 +65,11 @@ const GemstoneShowcase = () => {
                 section.align === 'left' ? 'lg:flex-row-reverse' : 'lg:flex-row'
               } items-stretch lg:items-center min-h-screen`}
             >
-              {/* Content Side */}
-              <div className="w-full lg:w-1/2 flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 lg:py-16">
+              
+              <SlideAnimation 
+                direction={section.align === 'left' ? 'right' : 'left'}
+                className="w-full lg:w-1/2 flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 lg:py-16"
+              >
                 <div className="max-w-xl w-full">
                   <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-normal leading-tight mb-4 sm:mb-5 md:mb-6 text-gray-800 ${playFair.className}`}>
                     {section.title}
@@ -80,10 +84,13 @@ const GemstoneShowcase = () => {
                     View Details
                   </button>
                 </div>
-              </div>
+              </SlideAnimation>
 
-              {/* Image Side */}
-              <div className="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-screen">
+              
+              <SlideAnimation 
+                direction={section.align === 'left' ? 'left' : 'right'}
+                className="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-screen"
+              >
                 <div className="relative w-full h-full">
                   <img
                     src={section.image}
@@ -91,7 +98,7 @@ const GemstoneShowcase = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-              </div>
+              </SlideAnimation>
             </div>
           </div>
         </div>
