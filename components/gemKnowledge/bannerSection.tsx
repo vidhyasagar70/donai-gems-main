@@ -20,7 +20,6 @@ export default function BannerSection() {
         className="object-cover object-center"
       />
       <div className="absolute inset-0 bg-black/40 z-10"></div>
-      {/* Centered Text with Animation */}
       <div className="relative z-20 flex items-center justify-center h-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
