@@ -1,5 +1,15 @@
 'use client';
+import { Playfair_Display,Jost} from "next/font/google";
 
+const playFair = Playfair_Display({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700"],
+});
+
+const jost = Jost({
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700"],
+});
 const AboutUsSection = () => {
   return (
     <div className="min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-16 bg-gradient-to-r from-[#fff5ec] to-[#fff5ec]">
@@ -33,15 +43,15 @@ const AboutUsSection = () => {
           {/* Right Side - Content */}
           <div className="w-full lg:w-7/12 mt-0 lg:mt-0">
             <div className="space-y-4 sm:space-y-5 md:space-y-6">
-              <p className="font-openSans text-xs sm:text-sm font-semibold tracking-[0.15em] sm:tracking-[0.2em] text-gray-600 uppercase">
+              <p className={`text-xs sm:text-sm font-semibold tracking-[0.15em] sm:tracking-[0.2em] text-gray-600 uppercase ${playFair.className}`}>
                 About Us
               </p>
              
-              <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-normal leading-tight text-gray-900">
+              <h2 className={` text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-normal leading-tight text-gray-900 ${playFair.className}`}>
                 Crafting Timeless Elegance With Passion
               </h2>
              
-              <div className="font-openSans space-y-4 sm:space-y-5 text-[#606060] leading-relaxed font-light">
+              <div className={`space-y-4 sm:space-y-5 text-[#606060] leading-relaxed font-normal ${jost.className}`}>
                 <p className="text-sm sm:text-base md:text-base">
                   At Donai Gems, we are more than a jewellery house — we are artisans of beauty, passion, and timeless craftsmanship. Nestled in the historic heart of Belgium, the world's gemstone capital, we dedicate ourselves to sourcing the rarest and most brilliant treasures, offering clients access to Premium Gems in Belgium that embody elegance and distinction.
                 </p>

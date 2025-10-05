@@ -133,7 +133,7 @@ const Navbar = () => {
                     duration: 0.3,
                     ease: "easeInOut",
                 }}
-                className="bg-[#181818] sticky top-0 z-1 shadow-lg"
+                className="bg-[#181818] sticky top-0 z-50 shadow-lg"
             >
                 <div
                     className={` hidden lg:flex max-w-[1380px] mx-auto py-3 px-10  gap-60 lg:gap-10 justify-center items-center ${mulish.className}`}

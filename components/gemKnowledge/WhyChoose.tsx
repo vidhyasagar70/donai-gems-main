@@ -1,5 +1,10 @@
 'use client';
+import { Playfair_Display} from "next/font/google";
 
+const playFair = Playfair_Display({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700"],
+});
 export default function DonaiDifference() {
   return (
     <section className="bg-[#A68A6A] px-6 py-16 md:py-24">
@@ -9,7 +14,7 @@ export default function DonaiDifference() {
           <p className="font-openSans text-white text-sm md:text-base tracking-[0.2em] uppercase mb-4 font-medium">
            Why Choose Donai Gems for Your Gemstone Collection
           </p>
-          <h2 className="font-playfair text-white text-4xl md:text-5xl lg:text-6xl font-normal leading-tight">
+          <h2 className={`text-white text-4xl md:text-5xl lg:text-6xl font-normal leading-tight ${playFair.className}`}>
             Experience the Donai Difference
           </h2>
         </div>
@@ -17,7 +22,7 @@ export default function DonaiDifference() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 lg:gap-y-16">
           {/* Exceptional Quality */}
           <div>
-            <h3 className="font-playfair text-white text-xl md:text-2xl font-normal mb-4">
+            <h3 className={`text-white text-xl md:text-2xl font-normal mb-4 ${playFair.className}`}>
               Exceptional Quality
             </h3>
             <p className="font-openSans text-white/90 text-sm md:text-base leading-relaxed font-light">
@@ -27,7 +32,7 @@ export default function DonaiDifference() {
 
           {/* Master Craftsmanship */}
           <div>
-            <h3 className="font-playfair text-white text-xl md:text-2xl font-normal mb-4">
+            <h3 className={`text-white text-xl md:text-2xl font-normal mb-4 ${playFair.className}`}>
               Master Craftsmanship
             </h3>
             <p className="font-openSans text-white/90 text-sm md:text-base leading-relaxed font-light">
@@ -37,7 +42,7 @@ export default function DonaiDifference() {
 
           {/* Timeless Design */}
           <div>
-            <h3 className="font-playfair text-white text-xl md:text-2xl font-normal mb-4">
+            <h3 className={`text-white text-xl md:text-2xl font-normal mb-4 ${playFair.className}`}>
               Timeless Design
             </h3>
             <p className="font-openSans text-white/90 text-sm md:text-base leading-relaxed font-light">
@@ -47,7 +52,7 @@ export default function DonaiDifference() {
 
           {/* Personalized Creations */}
           <div>
-            <h3 className="font-playfair text-white text-xl md:text-2xl font-normal mb-4">
+            <h3 className={`text-white text-xl md:text-2xl font-normal mb-4 ${playFair.className}`}>
               Personalized Creations
             </h3>
             <p className="font-openSans text-white/90 text-sm md:text-base leading-relaxed font-light">
@@ -57,7 +62,7 @@ export default function DonaiDifference() {
 
           
           <div>
-            <h3 className="font-playfair text-white text-xl md:text-2xl font-normal mb-4">
+            <h3 className={`text-white text-xl md:text-2xl font-normal mb-4 ${playFair.className}`}>
               Heritage & Legacy
             </h3>
             <p className="font-openSans text-white/90 text-sm md:text-base leading-relaxed font-light">
@@ -67,7 +72,7 @@ export default function DonaiDifference() {
 
           
           <div>
-            <h3 className="font-playfair text-white text-xl md:text-2xl font-normal mb-4">
+            <h3 className={`text-white text-xl md:text-2xl font-normal mb-4 ${playFair.className}`}>
               Passion & Integrity
             </h3>
             <p className="font-openSans text-white/90 text-sm md:text-base leading-relaxed font-light">

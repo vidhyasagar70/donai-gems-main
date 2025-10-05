@@ -1,5 +1,17 @@
 'use client';
 
+import { Playfair_Display, Jost } from "next/font/google";
+
+const playFair = Playfair_Display({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700"],
+});
+
+const jost = Jost({
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700"],
+});
+
 interface Section {
   title: string;
   content: string;
@@ -55,14 +67,14 @@ const GemstoneShowcase = () => {
               {/* Content Side */}
               <div className="w-full lg:w-1/2 flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 lg:py-16">
                 <div className="max-w-xl w-full">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-normal leading-tight mb-4 sm:mb-5 md:mb-6 text-gray-800">
+                  <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-normal leading-tight mb-4 sm:mb-5 md:mb-6 text-gray-800 ${playFair.className}`}>
                     {section.title}
                   </h2>
-                  <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-7 md:mb-8 text-gray-600 font-light">
+                  <p className={`text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-7 md:mb-8 text-gray-800 font-normal ${jost.className}`}>
                     {section.content}
                   </p>
                   <button 
-                    className="text-white px-6 sm:px-8 py-2.5 sm:py-3 transition-all duration-300 font-medium uppercase text-xs sm:text-sm hover:opacity-90 hover:shadow-2xl w-full sm:w-auto"
+                    className={`text-white px-6 sm:px-8 py-2.5 sm:py-3 transition-all duration-300 font-medium uppercase text-xs sm:text-sm hover:opacity-90 hover:shadow-2xl w-full sm:w-auto ${jost.className}`}
                     style={{ background: '#aa8765' }}
                   >
                     View Details
